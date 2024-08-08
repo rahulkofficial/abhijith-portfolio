@@ -106,7 +106,7 @@
       }
       #contact ul.social li a img:hover{
         width: 94%;
-        @apply border border-yellow-400 rounded-[50%] sm:w-[100%] p-1 animate-pulse; 
+        @apply border border-yellow-400 rounded-[50%] sm:w-[100%] sm:p-0 p-1 animate-pulse; 
       }
       h4 a{
         @apply text-yellow-400 underline underline-offset-2 transition-all duration-300;
