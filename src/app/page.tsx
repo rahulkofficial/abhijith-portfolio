@@ -1,113 +1,33 @@
 import Image from "next/image";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>  
+        <div className=" transition-all delay-100 duration-500 absolute z-0 bg-[url('/assets/images/exterior1.jpg')] bg-cover bg-no-repeat w-[100%] h-[100%] opacity-[0.04]"></div>
+        <div id="home" className=" relative px-8 3xm:px-4 pt-10 4xm:pt-6 pb-10 2xm:pb-5 z-10 ">
+          <h1 title="Hii" className=" transition-all transition-bg duration-500 delay-100 w-[144px] h-[144px] xm:w-[114px] xm:h-[114px] 4xm:w-[80px] 4xm:h-[80px] hover:bg-gradient-to-r hover:from-orange-400 hover:to-yellow-400 hover:w-[148px] hover:h-[148px] border-2 rounded-[50%] border-yellow-400 m-auto p-1 hover:p-0"><Image className=" rounded-[50%]" src="/assets/images/abj.png" alt="photo" width={144} height={144} /></h1>
+          <h1 className="mt-4 3xm:mt-2 inline-block bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-100 bg-transparent bg-clip-text text-transparent ">ABHIJITH TV</h1>
+          <h2 className="mt-2 3xm:mt-1">Civil engineer, Interior designer, 3D Visualiser</h2>
+          <h4 className="mt-4 3xm:mt-2">DOB :- 03/06/2002</h4>
+          <div className="a-s mt-14 3xm:mt-8 flex items-center justify-between lg:block">
+            <div className="lg:mb-10 3xm:mb-6">
+              <h2 className=" underline underline-offset-2 text-yellow-200">ABOUT</h2>
+              <p className="mt-2">Hii, I'm ABHIJITH TV, I'm a passionate and hardworking Civil Engineer with expertise in Interior Design, and 3D Visualization. I'm a quick learner and more excited to complete projects that satisfies the clients requirements with in time and budget. I have skills in AutoCad, Lumion, SketchUp, 3dx Max,etc. I specialize in transforming complex ideas into functional, beautiful, and well-visualized projects, ensuring every detail is aligned with client goals and industry standards.</p>
+              <Link href={'#work'} className=" text-yellow-400 hover:underline hover:text-yellow-600">Lets see some of my works</Link>
+            </div>
+            <div>
+              <h2 className=" underline underline-offset-2 text-yellow-200">SKILLS</h2>
+              <ul className="skills mt-2 text-left inline-block list-disc">
+                <li><p>AutoCad</p></li>
+                <li><p>Lumion</p></li>
+                <li><p>SketchUp</p></li>
+                <li id="work"><p>3dx Max</p></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }

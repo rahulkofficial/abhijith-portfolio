@@ -2,32 +2,172 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+    font-family: 'Outfit-r';
+    src: url('/assets/fonts/Outfit-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Outfit-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+    font-family: 'Outfit-m';
+    src: url('/assets/fonts/Outfit-Medium.woff2') format('woff2'),
+        url('/assets/fonts/Outfit-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+    font-family: 'Outfit-b';
+    src: url('/assets/fonts/Outfit-Bold.woff2') format('woff2'),
+        url('/assets/fonts/Outfit-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@font-face {
+    font-family: 'Outfit-l';
+    src: url('/assets/fonts/Outfit-Light.woff2') format('woff2'),
+        url('/assets/fonts/Outfit-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+  
+
+
+@layer base{
+    header div ul li a{
+        color: #fff;
+    }
+    header div ul li a:hover{
+        @apply transition-all duration-300 text-yellow-400;
+    }
+    .transition-bg {
+        background: linear-gradient(to right,#6e50a3,#000);
+        background-size: 200% 100%;
+        background-position: 0% 0%;
+        transition: background-position 2s ease 1s;
+      }
+      
+      .transition-bg:hover {
+        background-position: 40% 0%;
+      }
+      h1{
+        font-family:'Outfit-b';
+        font-size: 36px;
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        @apply sm:text-[30px] xm:text-[26px] 4xm:text-[18px];
+      }
+      h2{
+        font-family: 'Outfit-m';
+        font-size: 24px;
+        word-spacing: 6px;
+        @apply sm:text-[20px] xm:text-[18px] 4xm:text-[14px];
+
+      }
+      h4{
+        font-family: 'Outfit-r';
+        font-size: 18px;
+        word-spacing: 6px;
+        @apply sm:text-[16px] xm:text-[14px] 4xm:text-[10px];
+
+      }
+      p{
+        font-family: 'Outfit-l';
+        font-size: 16px;
+        @apply sm:text-[14px] xm:text-[12px] 4xm:text-[8px];
+      }
+      a{
+        font-family: 'Outfit-l';
+        font-size: 18px;
+        @apply sm:text-[16px] xm:text-[14px] 4xm:text-[10px];
+      }
+      #contact ul.social li{
+        width: 6%;
+        @apply sm:w-[10%]
+
+      }
+      #contact ul.social li a{
+        display: block;
+        width: 100%;
+      }
+      #contact ul.social li a img{
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        @apply transition-all duration-300 sm:w-[94%] xm:w-[98%];
+      }
+      #contact ul.social li a img:hover{
+        width: 94%;
+        @apply border border-yellow-400 rounded-[50%] p-1 animate-pulse; 
+      }
+      h4 a{
+        @apply text-yellow-400 underline underline-offset-2 transition-all duration-300;
+      }
+      h4 a:hover{
+        @apply text-yellow-600 underline-offset-4 animate-pulse;
+      }
+      .a-s div{
+        display: block;
+        width: 46%;
+        @apply lg:w-[100%] border-2 border-yellow-400 p-4 rounded-[20px] shadow-xl shadow-black hover:shadow-yellow-800 transition-all delay-75 duration-700;
+      }
+
+      ul.skills li{
+        margin-top: 8px;
+      }
+
+      hr{
+        @apply  border-none mt-8 mb-8 h-[2px] w-[60%] m-auto bg-yellow-500 shadow shadow-yellow-400 animate-pulse;
+      }
+      footer ul{
+        display: inline-block;
+      }
+      footer ul li a p{
+        font-size: 13px;
+        @apply xm:text-[12px] 3xm:text-[8px]
+      }
+      footer ul li a p:hover{
+        color: rgb(210, 207, 207);
+        text-decoration: underline;
+      }
+      ul.footer{
+        width: 6%;
+        margin: 0 auto;
+        @apply sm:w-[10%] 2xm:w-[16%]
+      }
+      ul.footer li{
+        display: block;
+        width: 100%;
+      }
+      ul.footer li a{
+        display: block;
+        width: 100%;
+      }
+      ul.footer li a img{
+        display: block;
+        width: 100%;
+      }
+      ul.footer li a img:hover{
+        border:1px solid #fff;
+        border-radius: 50%;
+        padding: 2px;
+        background: #242323;
+      }
+
+      #works div h3{
+        font-size: 18px;
+        font-family: 'Outfit-m';
+        letter-spacing: 2px;
+        margin-bottom: 14px;
+        @apply sm:text-[14px] 3xm:text-[10px]  5xm:text-[8px];
+
+      }
 }
